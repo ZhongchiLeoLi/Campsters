@@ -1,0 +1,25 @@
+<% if(success && success.length) { %> 
+    <div id="allert" class="notification is-primary" role="alert">
+        <a id="delete" class="delete"></a>
+        <%= success %> 
+    </div>
+    <script>
+        var btn = document.getElementById('delete');
+        btn.onclick = function () {
+            document.getElementById('allert').remove();
+        };
+    </script>
+<% } %> 
+
+<% if(error && error.length) { %> 
+    <div id="allert" class="notification is-danger" role="alert">
+        <a id="delete" class="delete"></a>
+        <%= error %> 
+    </div>
+    <script>
+        var btn = document.getElementById('delete');
+        btn.onclick = function () {
+            document.getElementById('allert').remove();
+        };
+    </script>
+<% } %> 

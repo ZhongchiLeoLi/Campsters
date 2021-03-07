@@ -1,0 +1,85 @@
+<% layout('layouts/boilerplate') %> 
+<section class="section">
+    <h1 class="title is-1">Create a New Campground</h1>
+</section>
+
+<form class="camp-form validate" action="/campgrounds" method="POST" enctype="multipart/form-data" >
+
+    <div class="field">
+        <label class="label" for="title">Title</label>
+        <div class="control">
+            <input class="input" type="text" name="campground[title]" id="title" data-validation="not-blank">
+            <div class="validation-error-message hidden has-text-danger">A title for your campground is required</div>
+        </div>
+      </div>      
+
+    <div class="field">
+        <label class="label" for="location">Location</label>
+        <div class="control">
+            <input class="input" type="text" name="campground[location]" id="location" data-validation="not-blank">
+            <div class="validation-error-message hidden has-text-danger">The location of your campground is required</div>
+        </div>
+      </div>   
+
+      <label class="label" for="price">Price</label>
+      <div class="field has-addons">
+        
+        <p class="control">
+          <span class="select">
+            <select>
+              <option>$</option>
+            </select>
+          </span>
+        </p>
+        <p class="control">
+          <input class="input" type="number" id="price" placeholder="0.00" min="0" name="campground[price]" data-validation="not-blank">
+        </p>
+        <br>
+          <div class="validation-error-message hidden has-text-danger is-small">A valid price for your campground is required</div>
+      </div>
+
+      <div class="field">
+        <label class="label" >Images</label>
+        <div id="imgUpload" class="file has-name">
+          <label class="file-label" for="image">
+            <input class="file-input" type="file" name="image" id="image"  multiple>
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fas fa-upload"></i>
+              </span>
+              <span class="file-label">
+                Choose files…
+              </span>
+            </span>
+            <span class="file-name">
+              No file uploaded
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="description">Description</label>
+        <div class="control">
+          <textarea class="textarea" id="description" placeholder="Textarea" name="campground[description]" data-validation="not-blank"></textarea>
+          <div class="validation-error-message hidden has-text-danger">A description of your campground is required</div>
+        </div>
+      </div>
+      <div class="field">
+        <button type="submit" class="button is-primary">Create</button>
+      </div>
+</form>
+
+<script>
+  const fileInput = document.querySelector('#imgUpload input[type=file]');
+  fileInput.onchange = () => {
+    if (fileInput.files.length > 0) {
+      const fileName = document.querySelector('#imgUpload .file-name');
+      var names = "";
+      for(let fname of fileInput.files) {
+        names += fname.name + ', ';
+      }
+      fileName.textContent = names.slice(0, names.length - 2);
+    }
+  }
+</script>

@@ -1,0 +1,8 @@
+<% layout('layouts/boilerplate') %> 
+
+<div class="notification is-danger">
+    <h4 class="title"><%= err.message %> </h4>
+    <% if(process.env.NODE_ENV !== "production") { %> 
+    <p><%= err.stack %> </p>
+    <% } %> 
+  </div>

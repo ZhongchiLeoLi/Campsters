@@ -1,0 +1,258 @@
+.marker {
+  display: block;
+  border: none;
+  /* border-radius: 50%; */
+  cursor: pointer;
+  padding: 0;
+  background-image: url("../images/tent.png");
+  height: 40px;
+  width: 40px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+html {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.has-navbar-fixed-top {
+  padding-top: 6.5rem !important;
+}
+
+body {
+    display: flex;
+    flex-grow : 1;
+    flex-direction: column;
+}
+
+#wrapper {
+    flex: 1;
+}
+/* .container {
+    flex: 1;
+} */
+
+img {
+    object-fit: cover;
+}
+
+.show-img{
+  width:100%; 
+  height: 70vh;
+}
+
+.register {
+  height:100%;
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}
+
+.registerForm {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.imageFiles {
+  display: flex;
+  align-items: center;
+}
+
+.ima {
+  margin-right: 20px;
+}
+
+.ima>label {
+  right: .5rem;
+  position: absolute;
+  top: .5rem;
+  z-index: 1;
+}
+
+.ima>.delete {
+  right: .5rem;
+  position: absolute;
+  top: .5rem;
+}
+
+.ima>.checkbox {
+  right: .5rem;
+  position: absolute;
+  top: .5rem;
+  z-index: -1;
+  opacity: 0%;
+}
+
+.ifile{
+  /* filter: grayscale(0%); */
+  opacity: 100%;
+  border-radius: 6px;
+  /* z-index: -1; */
+}
+.checkbox:checked ~ .ifile {
+  /* filter: grayscale(100%); */
+  opacity: 50%;
+  /* z-index: -1; */
+}
+
+@media screen and (max-width: 835px) {
+  .imageFiles {
+    display:block;
+    /* align-items: center; */
+    -moz-column-count:    2;
+    -webkit-column-count: 2;
+    column-count:         2;
+  }
+  .ima {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 7px;
+  }
+
+}
+
+/* .control-me::after {
+  content: "😃";
+  font-size: 100px;
+}
+.checkbox:checked ~ .control-me::after {
+  content: "😩";
+} */
+
+@media screen and (max-width: 1023px) {
+  .is-two-fifths {
+      width: 100% !important;
+      height: 200px;
+      margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 835px) {
+    .navbar, .navbar-end, .navbar-menu, .navbar-start {
+        align-items: stretch;
+        display: flex;
+        box-shadow: none    ;
+    }
+}
+
+@media screen and (min-width: 835px) {
+    .navbar {
+        min-height: 3.25rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .bd-navbar {
+        padding: 1rem 2rem;
+    }
+
+}
+
+@media screen and (min-width: 1216px) {
+    .bd-navbar {
+        font-size: 1.125rem;
+        padding: 1.5rem 4rem;
+    }
+}
+
+.camp-form {
+  width: 95vw;
+}
+
+@media screen and (min-width: 1000px) {
+  .camp-form{
+    width: 45rem;
+  }
+}
+
+footer {
+    margin-top: 5rem;
+}
+
+.section {
+    padding : 3rem 0rem;
+}
+
+/* #camps {
+    display: flex;
+    max-width: 33%;
+} */
+/* 
+.card {
+    margin-right: 1.4rem;
+    margin-bottom: 1.5rem;
+    float: left;
+    width: 31%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .card {
+      width: 48%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .card {
+      width: 100%;
+    }
+  } */
+
+#camps {
+    -moz-column-count:    3;
+    -webkit-column-count: 3;
+    column-count:         3;
+}
+
+.card {
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+  page-break-inside: avoid; /* Firefox */
+  break-inside: avoid; /* IE 10+ */
+}
+
+
+  @media (max-width: 1100px) {
+    #camps {
+    -moz-column-count:    2;
+    -webkit-column-count: 2;
+    column-count:         2;
+    }
+  }
+  @media (max-width: 835px) {
+    #camps {
+    -moz-column-count:    1;
+    -webkit-column-count: 1;
+    column-count:         1;
+    }
+  }
+
+@media screen and (min-width: 1216px) {
+  .container:not(.is-max-desktop) {
+    max-width: 95vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 95vw;
+    }
+}
+
+.validation-error-message {
+  font-size: small;
+}
+
+.hero {
+
+  background-image: 
+  url(https://images.unsplash.com/photo-1476041800959-2f6bb412c8ce?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80);
+  background-size: cover;
+  background-position: top;
+  color: #00D1B2;
+}
+

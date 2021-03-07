@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+<head>
+  <link rel="icon" href="/images/logo.svg" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campsters</title>
+    <link rel="stylesheet" href="/css/bulma.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+</head>
+<body class="is-flex-direction-column" style="height: 100% i !important;">
+
+    <%- include('../partials/navbar') %> 
+    <div class="columns is-desktop register" >
+        <div class="column is-two-fifths" style="background-image: url('https://source.unsplash.com/collection/4497751/'); background-size: cover; background-position: center;">
+        </div>
+        <div class="column">
+            <div class="container registerForm">
+              <%- include('../partials/flash') %> 
+                <h1 class="title">Join other Campsters</h1>
+                <br><br>
+                
+                <form class="camp-form validate" action="/register" method="POST">
+                  <div class="columns">
+                    <div class="column">
+                    <div class="field">
+                        <label class="label" for="fname">First Name</label>
+                        <div class="control">
+                            <input class="input" type="text" name="fname" id="fname" data-validation="not-blank">
+                            <div class="validation-error-message hidden has-text-danger">Your first name is required</div>
+                        </div>
+                      </div>      
+                    </div>
+                    <div class="column">
+                      <div class="field">
+                          <label class="label" for="lname">Last Name</label>
+                          <div class="control">
+                              <input class="input" type="text" name="lname" id="lname" data-validation="not-blank">
+                              <div class="validation-error-message hidden has-text-danger">Your last name is required</div>
+                          </div>
+                        </div>   
+                      </div>
+                    </div>
+    
+                      <div class="field">
+                        <label class="label" for="email">Email address</label>
+                        <div class="control">
+                            <input class="input" type="text" name="email" id="email" data-validation="email not-blank">
+                            <div class="validation-error-message hidden has-text-danger">A valid email address is required</div>
+                        </div>
+                      </div>
+                
+                      <div class="field">
+                        <label class="label" for="username">Username</label>
+                        <div class="control">
+                            <input class="input" type="text" name="username" id="username" data-validation="not-blank" autofocus>
+                            <div class="validation-error-message hidden has-text-danger">A username is required</div>
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <label class="label" for="password">Password</label>
+                        <div class="control">
+                            <input class="input" type="password" name="password" id="password" data-validation="not-blank">
+                            <div class="validation-error-message hidden has-text-danger">A password is required</div>
+                        </div>
+                      </div>
+
+                      <div class="field">
+                        <button type="submit" class="button is-primary" style="width: 100%;">Join</button>
+                      </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/bulma-form-validation.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>
