@@ -4,10 +4,17 @@ http://campsters.herokuapp.com/
 
 A web application for users to create and review campground profiles similar to Yelp.
 
-Built with **Node.js**, **Express.js**, **MongoDB**, and **Bulma**.
+## Built with
 
-Utilized Unsplash, Mapbox, and Cloudinary APIs. Deployed using **Heroku**.
+* Node.js
+* Express.js
+* MongoDB
+* Unsplash, Mapbox, and Cloudinary APIs
+* Custom CSS and Bulma
+* Heroku
 
-Handled both Client-side and Server-side errors through front-end form validations and back-end schema validation middleware.
+## This website features
 
-Implemented User Authentication, User Authorization, and basic security features using **Passport.js**, **Helmet.js**, and html sanitizing.
+* Fully responsive layout
+* Full CRUD functionalities for campgrounds and reviews data
+* User Authentication, User Authorization, and basic security features
