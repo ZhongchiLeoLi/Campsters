@@ -3,6 +3,7 @@
 http://campsters.herokuapp.com/
 
 A web application for users to create and review campground profiles similar to Yelp.
+
 Feel free to sign up your own dummy account to create new campgrounds and leave reviews on other campgrounds.
 
 ## Built with
