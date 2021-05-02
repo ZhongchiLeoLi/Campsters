@@ -1,8 +1,12 @@
+if(process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+}
+
 const fetch = require("node-fetch");
 const mongoose = require('mongoose');
 const cities = require('./cities');
 const {places, descriptors}= require('./seedHelpers');
-mongoose.connect('mongodb+srv://campster_dev:155M00wD7gmbuhP0@cluster0.pgq7t.mongodb.net/Campster?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
+mongoose.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
 .then(() => {
     console.log("MONGO CONNECTION OPEN!!!");
 }).catch((err) => {
